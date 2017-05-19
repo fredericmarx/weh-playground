@@ -8,21 +8,21 @@ const base = require('./layouts/base')
 const alt = require('./layouts/alt')
 
 const layouts = {
-	base,
-	alt
+  base,
+  alt
 }
 
 const config = {
-	source: 'src'
+  source: 'src'
 }
 
 weh(async site => {
-	site.config(config)
+  site.config(config)
 
-	site.use(matter)
+  site.use(matter)
   site.use(markdown)
-	site.use(templates, {layouts})
-	site.use(minify)
+  site.use(templates, {layouts})
+  site.use(minify)
 
   return site
 })
